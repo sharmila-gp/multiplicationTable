@@ -20,10 +20,15 @@ input2.setAttribute("min",10);
 main.appendChild(input2);
 
 input2.addEventListener("input",()=>{
-	for (var j=1;j<=input2.value;j++){
-	var para = document.createElement("P");
-	para.innerHTML = j +" * "+input1.value+" = "+ j*input1.value;
-	main.appendChild(para);
+	if(input2.value<10){
+		alert("enter after 10 in second input");
+	}
+	else{
+		for (var j=1;j<=input2.value;j++){
+		var para = document.createElement("P");
+		para.innerHTML = j +" * "+input1.value+" = "+ j*input1.value;
+		main.appendChild(para);
+		}
 	}
 });
 
